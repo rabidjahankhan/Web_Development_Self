@@ -1,0 +1,47 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+h1{
+    color: red;
+}
+p a {
+    color: purple;
+    background-color: bisque;
+    text-decoration: none;
+}
+nav ul li a {
+    color: hotpink;
+}
+p + h3 {
+    text-decoration: underline;
+}
+
+div > input {
+    color: darkgoldenrod;
+}
+input[type="text"] {
+    color: palevioletred;
+}
+input[type="password"] {
+    color: greenyellow;
+}
+input[type] {
+    background-color: rgb(189, 245, 35);
+}
+button:hover {
+    background-color: rgb(72, 224, 26);
+    color: rgb(143, 44, 44);
+}
+h3:hover {
+    text-decoration: none;
+}
+button:active {
+    background-color: blueviolet;
+    color: black;
+}
+p:nth-of-type(2n) {
+    background-color: rgb(209, 48, 115);
+}
+h1::first-letter {
+    color: green;
+}

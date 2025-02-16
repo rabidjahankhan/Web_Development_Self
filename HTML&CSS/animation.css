@@ -1,0 +1,31 @@
+.box {
+    height: 100px;
+    width: 300px;
+    background-color: #db1b7b;
+
+    /* animation-name: fontAnimation; */
+    animation-name: colourAnimate;
+    animation-duration: 2s; /* You may add duration for the animation */
+    animation-timing-function: ease-in;
+    transition-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes fontAnimation {
+    from {
+        font-size: 20px;
+    }
+    to {
+        font-size: 100px;
+    }
+}
+
+@keyframes colourAnimate {
+    from {
+        background-color: #db1b7b;
+    }
+    to {
+        background-color: #ff5722;
+    }
+}

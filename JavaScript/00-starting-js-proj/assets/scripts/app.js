@@ -54,13 +54,19 @@
 // const editedhobbies = hobbies.map((item) => item + "!");
 // console.log(editedhobbies);
 
-const password = prompt("Enter your password: ");
-if (password === "Hello") {
-    console.log("Access Granted");
-} else if (password == "hello") {
-    console.log("Almost there");
-} else {
-    console.log("Access Denied");
+// const password = prompt("Enter your password: ");
+// if (password === "Hello") {
+//     console.log("Access Granted");
+// } else if (password == "hello") {
+//     console.log("Almost there");
+// } else {
+//     console.log("Access Denied");
+// }
+
+const hobbies = ["Sports", "Cooking", "Reading", "Traveling"];
+
+for (const hobby of hobbies) {
+    console.log(hobby);
 }
 
 

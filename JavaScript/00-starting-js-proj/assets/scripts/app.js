@@ -64,10 +64,13 @@
 // }
 
 const hobbies = ["Sports", "Cooking", "Reading", "Traveling"];
+hobbies.push("Coding");
 
 for (const hobby of hobbies) {
     console.log(hobby);
 }
+
+console.log(hobbies.map((hobby) => hobby.length));
 
 
 function handleTimeout() {

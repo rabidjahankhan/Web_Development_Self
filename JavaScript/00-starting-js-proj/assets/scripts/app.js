@@ -70,4 +70,17 @@ for (const hobby of hobbies) {
 }
 
 
+function handleTimeout() {
+    console.log("Timeout occurred!");
+}
+
+const handleTimeout2 = () => {
+    console.log("Timeout occurred again!");
+}
+
+setTimeout(handleTimeout, 2000);
+setTimeout(handleTimeout2, 4000);
+setTimeout(() => {
+    console.log("Timeout occurred once more!");
+}, 6000);
 

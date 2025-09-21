@@ -39,17 +39,29 @@
 // const user1 = new User("Rabid", 24);
 // console.log(user1);
 
-const hobbies = ["Sports", "Cooking", "Reading", "Traveling"];
-console.log(hobbies);
-console.log(hobbies[2]);
-hobbies.push("Coding");
-console.log(hobbies);
+// const hobbies = ["Sports", "Cooking", "Reading", "Traveling"];
+// console.log(hobbies);
+// console.log(hobbies[2]);
+// hobbies.push("Coding");
+// console.log(hobbies);
 
-const index = hobbies.findIndex((item) => {
-    return item === "Reading";
-});
+// const index = hobbies.findIndex((item) => {
+//     return item === "Reading";
+// });
 
-console.log(index);
+// console.log(index);
 
-const editedhobbies = hobbies.map((item) => item + "!");
-console.log(editedhobbies);
+// const editedhobbies = hobbies.map((item) => item + "!");
+// console.log(editedhobbies);
+
+const password = prompt("Enter your password: ");
+if (password === "Hello") {
+    console.log("Access Granted");
+} else if (password == "hello") {
+    console.log("Almost there");
+} else {
+    console.log("Access Denied");
+}
+
+
+

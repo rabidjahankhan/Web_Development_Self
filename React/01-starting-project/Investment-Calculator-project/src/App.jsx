@@ -4,18 +4,20 @@ import UserInput from "./components/UserInput.jsx";
 import { useState } from "react";
 
 function App() {
-  const [usrInput, setUserInput] = useState({
+  const [userInput, setUserInput] = useState({
     initialInvestment: 10000,
     annualInvestment: 1200,
     expectedReturn: 6,
-    dration: 10,
+    duration: 10,
   });
+
+  const inputIsValid = userInput.duration >= 1;
 
   function handleChange(inputIdentifier, newValue) {
     setUserInput((prevUserInput) => {
       return {
         ...prevUserInput,
-        [inputIdentifier]: newValue,
+        [inputIdentifier]: +newValue,
       };
     });
   }
@@ -23,8 +25,9 @@ function App() {
   return (
     <>
       <Header />
-      <UserInput userInput={usrInput} onChange={handleChange}/>
-      <Results input={usrInput} /> 
+      <UserInput userInput={userInput} onChange={handleChange}/>
+      {!inputIsValid && <p className="center">Duration should be at least 1 year</p>}
+      {inputIsValid && <Results input={userInput} />} 
     </>
   );
 }

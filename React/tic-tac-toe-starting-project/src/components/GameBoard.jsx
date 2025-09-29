@@ -1,22 +1,6 @@
-// import { useState } from "react";
-
-
 
 export default function GameBoard({ onSelectSquare, board }) {
-  
-  // const [gameBoard, setGameBoard] = useState(initialGameBoard);
 
-  // function handleSelectSquer(rowIndex, colIndex) {
-  //   setGameBoard((prevGameBoard) => {
-  //     const updatedBoard = [
-  //       ...prevGameBoard.map((innerArray) => [...innerArray]),
-  //     ];
-  //     updatedBoard[rowIndex][colIndex] = activePlayerSymbol;
-  //     return updatedBoard;
-  //   });
-
-  //   onSelectSquare();
-  // }
 
   return (
     <ol id="game-board">

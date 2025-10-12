@@ -10,7 +10,7 @@ function App() {
     projects: [],
   });
 
-  function handleSelectProject(id){
+  function handleSelectProject(id) {
     setProjectsState((prevState) => {
       return {
         ...prevState,
@@ -53,12 +53,30 @@ function App() {
     });
   }
 
-  const selectedProject = projectState.projects.find(project => project.id === projectState.selectedProjectId);
+  function handleDeleteProject() {
+    setProjectsState((prevState) => {
+      return {
+        ...prevState,
+        selectedProjectId: undefined,
+        projects: prevState.projects.filter(
+          (project) => project.id !== prevState.selectedProjectId
+        ),
+      };
+    });
+  }
 
-  let content = <SelectedProject project={selectedProject}/>;
+  const selectedProject = projectState.projects.find(
+    (project) => project.id === projectState.selectedProjectId
+  );
+
+  let content = (
+    <SelectedProject project={selectedProject} onDelete={handleDeleteProject} />
+  );
 
   if (projectState.selectedProjectId === null) {
-    content = <NewProject onAdd={handleAddProject} onCancel={handleCancelAddProject}/>;
+    content = (
+      <NewProject onAdd={handleAddProject} onCancel={handleCancelAddProject} />
+    );
   } else if (projectState.selectedProjectId === undefined) {
     content = <NoProjectSelected onStartAddProject={handleStartAddProject} />;
   }

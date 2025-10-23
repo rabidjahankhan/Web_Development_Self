@@ -19,7 +19,7 @@ export default function Answers({ answers, selectedAnswer, answerState,onSelect 
         }
 
         if (
-          (answerState === "correct" || answerState === "incorrect") &&
+          (answerState === "correct" || answerState === "wrong") &&
           isSelected
         ) {
           cssClass = answerState;

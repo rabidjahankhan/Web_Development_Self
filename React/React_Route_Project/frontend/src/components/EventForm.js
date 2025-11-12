@@ -12,7 +12,7 @@ function EventForm({ method, event }) {
     <form className={classes.form}>
       <p>
         <label htmlFor="title">Title</label>
-        <input id="title" type="text" name="title" required />
+        <input id="title" type="text" name="title" required defaultValue={event.title}/>
       </p>
       <p>
         <label htmlFor="image">Image</label>

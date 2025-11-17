@@ -97,3 +97,17 @@ div {
     transform: scale(1.02);
  }
 
+ .card2 {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    display: inline-block;
+    margin: 20px;
+    border-radius: 20px;
+    padding: 20px;
+ }
+
+
+
+
+

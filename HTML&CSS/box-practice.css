@@ -1,8 +1,8 @@
 .root {
-    width: 852px;
-    height: 400px;
+    width: 100vw;
+    height: 100vh;
     border: 1px solid black;
-    background-color: azure;
+    background-color: rgb(69, 206, 206);
     padding: 50px;
     display: flex;
     margin-bottom: 50px;
@@ -10,7 +10,6 @@
 .container {
     height: 133px;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
 
@@ -27,20 +26,19 @@
 
 .root2 {
     border: 1px solid black;
-    width: 852px;
-    height: 400px;
-    background-color: azure;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(69, 206, 206);
     padding: 50px;
     display: grid;
-    justify-content: center;
-    margin-bottom: 100px;
     
 }
 
 .container2 {
+
     height: 133px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(198px, 1fr));
     gap: 20px;
 
 }

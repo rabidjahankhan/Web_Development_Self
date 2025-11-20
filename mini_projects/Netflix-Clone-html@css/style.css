@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.main {
+    background-image: url("assets/Images/bg.jpg");
+    height: 80vh;
+    position: relative;
+}
+.main .box {
+    height: 80vh;
+    width: 100%;
+    opacity: 0.44;
+    background-color: black;
+    top: 0;
+    position: absolute;
+}
+nav {
+    max-width: 80vw;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    background-color: tomato;
+}

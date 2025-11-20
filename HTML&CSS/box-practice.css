@@ -13,15 +13,18 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-
 }
 
 .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 198px;
     height: 133px;
     border-radius: 20px;
     overflow: hidden;
     background-color: #FF1010;
+    
 }
 
 
@@ -46,6 +49,9 @@
 }
 
 .content2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 198px;
     height: 133px;
     border-radius: 20px;

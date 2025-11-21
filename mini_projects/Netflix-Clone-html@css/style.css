@@ -5,6 +5,9 @@
 .main {
     background-image: url("assets/Images/bg.jpg");
     height: 80vh;
+    background-size: max(1200px, 100vw) ;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
 }
 .main .box {
@@ -16,9 +19,10 @@
     position: absolute;
 }
 nav {
+    justify-content: space-between;
     max-width: 80vw;
     display: flex;
     margin: auto;
     align-items: center;
-    background-color: tomato;
+    height: 62px;
 }

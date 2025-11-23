@@ -1,4 +1,4 @@
-export default function Card() {
+export default function Card({title, message}) {
   return (
     <div
       style={{
@@ -8,8 +8,8 @@ export default function Card() {
         borderRadius: "8px",
       }}
     >
-        <h2>Card Title</h2>
-        <p>This is a Card Component</p>
+        <h2>{title}</h2>
+        <p>{message}</p>
     </div>
   );
 }

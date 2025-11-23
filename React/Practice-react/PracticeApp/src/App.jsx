@@ -1,19 +1,41 @@
 import Card from "./components/Card";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import MyButton from "./components/MyButton";
 
 function App() {
+
+	function handleClick() {
+		alert("Button Clicked!");
+	}
+
   return (
-  <>
-    <Header />
+    <>
+      <Header />
 
-    <Card />
-    <Card />
-    <Card />
-    <Card />
+      <MyButton text="Click Me" onClick={handleClick} />
+      <MyButton text="Learn More" onClick={() => alert("Learning...")} />
+      <MyButton text="Submit" onClick={() => console.log("Submitted")} />
 
-    <Footer />
-  </>
+      <Card
+        title="Learn React"
+        message="Understand components, props, and state."
+      />
+      <Card
+        title="Practice Everyday"
+        message="Building small projects improves memory."
+      />
+      <Card
+        title="Build Real Apps"
+        message="Use your knowledge to create real-world apps."
+      />
+      <Card
+        title="Learn Swimming"
+        message="Swmming make you healthy and confident"
+      />
+
+      <Footer />
+    </>
   );
 }
 

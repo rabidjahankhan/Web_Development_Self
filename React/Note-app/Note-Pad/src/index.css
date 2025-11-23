@@ -1,1 +1,106 @@
 @import "tailwindcss";
+
+/* global.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+  }
+
+  .header {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+  }
+  
+  .new-task-btn {
+    padding: 10px 18px;
+    background: #995f0786;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .new-task-btn:hover {
+    background: #b49b0c;
+  }
+  
+  .form-control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  .form-control label {
+    margin-bottom: 6px;
+    font-weight: bold;
+  }
+  
+  .form-control input,
+  .form-control textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  textarea {
+    min-height: 100px;
+  }
+
+  .task-grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 20px;
+  }
+  
+  .task-card {
+    background: white;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+  
+  .task-card h3 {
+    margin: 0 0 10px 0;
+  }
+  
+  .task-card .desc {
+    color: #444;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .due-date {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .delete-btn {
+    padding: 6px 12px;
+    background: crimson;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .delete-btn:hover {
+    background: rgb(180, 20, 40);
+  }
+  
+  

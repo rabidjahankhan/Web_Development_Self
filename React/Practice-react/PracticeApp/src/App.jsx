@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import MyButton from "./components/MyButton";
 import Counter from "./components/Counter";
+import Toggle from "./components/Toggle";
 
 function App() {
 
@@ -15,6 +16,8 @@ function App() {
       <Header />
 
       <Counter/>
+
+      <Toggle/>
 
       <MyButton text="Click Me" onClick={handleClick} />
       <MyButton text="Learn More" onClick={() => alert("Learning...")} />

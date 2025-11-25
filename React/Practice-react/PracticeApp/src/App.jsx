@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import MyButton from "./components/MyButton";
 import Counter from "./components/Counter";
 import Toggle from "./components/Toggle";
+import InputForm from "./components/InputForm";
 
 function App() {
 
@@ -14,6 +15,8 @@ function App() {
   return (
     <>
       <Header />
+
+      <InputForm/>
 
       <Counter/>
 

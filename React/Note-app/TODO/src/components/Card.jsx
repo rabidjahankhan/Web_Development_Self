@@ -5,8 +5,8 @@ export default function Card({title, content}) {
     return (
         <div className="card-container">
         <div className="card-item">
-            <h2>Title</h2>
-            <p>Content</p>
+            <strong><h2>{title}</h2></strong>
+            <p>{content}</p>
         </div>
         </div>
     );

@@ -14,13 +14,13 @@
   overflow: hidden;
 }
 
-@media (min-width: 580px) and (max-width: 869px) {
+/* @media (min-width: 580px) and (max-width: 869px) {
   .card-container {
     grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
   }
-}
+} */
 
-@media (max-width: 580px) {
+@media (max-width: 594px) {
   .card-container {
     width: 100%;
     grid-template-columns: 1fr    

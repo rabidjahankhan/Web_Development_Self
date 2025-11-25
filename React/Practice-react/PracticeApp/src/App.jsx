@@ -16,7 +16,7 @@ function App() {
     <>
       <Header />
 
-      <InputForm/>
+      {/* <InputForm/>
 
       <Counter/>
 
@@ -24,7 +24,7 @@ function App() {
 
       <MyButton text="Click Me" onClick={handleClick} />
       <MyButton text="Learn More" onClick={() => alert("Learning...")} />
-      <MyButton text="Submit" onClick={() => console.log("Submitted")} />
+      <MyButton text="Submit" onClick={() => console.log("Submitted")} /> */}
 
       <Card
         title="Learn React"

@@ -2,7 +2,7 @@ import { Pin, SquareCheckBig, Brush, Image, Palette } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import "./NoteInput.css";
 
-export default function NoteInput() {
+export default function NoteInput({onAddNote } ) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [note, setNote] = useState({ title: "", content: "" });
 
@@ -20,7 +20,7 @@ export default function NoteInput() {
   function handleSubmit() {
     if (!note.title && !note.content) return;
 
-    console.log("Note submitted:", note);
+    onAddNote(note);
 
     setNote({ title: "", content: "" });
     setIsExpanded(false);

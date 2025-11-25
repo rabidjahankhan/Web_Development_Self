@@ -2,6 +2,7 @@ export default function Card({title, message}) {
   return (
     <div
       style={{
+        display: "grid",
         padding: "20px",
         border: "1px solid #ccc",
         margin: "10px",

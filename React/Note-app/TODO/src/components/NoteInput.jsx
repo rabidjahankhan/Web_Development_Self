@@ -17,6 +17,10 @@ export default function NoteInput({ onAddNote }) {
     setIsExpanded(true);
   }
 
+  function handleExpandedFalse() {
+    setIsExpanded(false);
+  }
+
   function handleChange(e) {
     const { name, value } = e.target;
     setNote((prev) => ({ ...prev, [name]: value }));
@@ -88,7 +92,7 @@ export default function NoteInput({ onAddNote }) {
 
         {isExpanded && (
           <div className="note-actions">
-            <button onClick={handleSubmit}>Save</button>
+            <button onFocus={handleExpandedFalse}>Close</button>
           </div>
         )}
       </div>

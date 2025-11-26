@@ -38,8 +38,7 @@
 }
 
 .note-actions button {
-  background-color: #52a5f8;
-  color: white;
+  color: black;
   border: none;
   padding: 8px 16px;
   border-radius: 4px;
@@ -48,7 +47,7 @@
 }
 
 .note-actions button:hover {
-  background-color: #3a8de0;
+  background-color: #e9eaea;
 }
 
 .pin {
@@ -65,7 +64,7 @@
     top: 12px;           
     right: 12px;
     display: flex;
-    gap: 20px;
+    gap: 25px;
     stroke: #202124;
     cursor: pointer;
     opacity: 0.5;

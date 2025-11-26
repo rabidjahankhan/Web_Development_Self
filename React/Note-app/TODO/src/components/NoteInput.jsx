@@ -2,11 +2,16 @@ import { Pin, SquareCheckBig, Brush, Image, Palette } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import "./NoteInput.css";
 
-export default function NoteInput({onAddNote } ) {
+export default function NoteInput({ onAddNote }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [note, setNote] = useState({ title: "", content: "" });
 
   const noteRef = useRef(null);
+
+  const letestNoteRef = useRef(note);
+  useEffect(() => {
+    letestNoteRef.current = note;
+  }, [note]);
 
   function handleExpanded() {
     setIsExpanded(true);
@@ -29,13 +34,16 @@ export default function NoteInput({onAddNote } ) {
   useEffect(() => {
     function handleClickOutside(event) {
       if (noteRef.current && !noteRef.current.contains(event.target)) {
+        if (letestNoteRef.current.title || letestNoteRef.current.content) {
+          onAddNote(letestNoteRef.current);
+          setNote({ title: "", content: "" });
+        }
         setIsExpanded(false);
       }
     }
-
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+  }, [onAddNote]);
 
   return (
     <div className="note-container">

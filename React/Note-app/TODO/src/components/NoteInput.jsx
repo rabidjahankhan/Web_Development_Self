@@ -4,6 +4,7 @@ import "./NoteInput.css";
 
 export default function NoteInput({ onAddNote }) {
   const [isExpanded, setIsExpanded] = useState(false);
+  // add backgroundColor state
   const [note, setNote] = useState({
     title: "",
     content: "",
@@ -11,7 +12,7 @@ export default function NoteInput({ onAddNote }) {
   });
 
   const [showColors, setShowColors] = useState(false);
-
+// show list of colors
   const colors = [
     "#ffffff",
     "#f28b82",
@@ -93,7 +94,6 @@ export default function NoteInput({ onAddNote }) {
             <div className="palette" onClick={() => setShowColors(!showColors)}>
               <Palette />
             </div>
-
             {showColors && (
               <div className="color-popup">
                 {colors.map((color) => (

@@ -7,11 +7,23 @@
 }
 .card-item {
   border-radius: 8px;
-  height: 100px;
-  padding-left: 10px;
-  padding-top: 10px;
+  min-height: 100px;
+  max-height: 673px;
+  padding: 16px ;
+
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
+}
+
+.card-item p {
+  display: -webkit-box;
+  -webkit-line-clamp: 27;  
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  line-height: 1.4;
 }
 
 /* @media (min-width: 580px) and (max-width: 869px) {
@@ -26,3 +38,4 @@
     grid-template-columns: 1fr    
   }
 }
+

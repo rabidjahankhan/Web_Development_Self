@@ -44,7 +44,10 @@ function App() {
       <NoteInput onAddNote={addNote} />
 
       {notes.map((note, index) => (
-        <Card key={index} title={note.title} content={note.content} />
+        <Card 
+        key={index} 
+        title={note.title} 
+        content={note.content} />
       ))}
     </>
   );

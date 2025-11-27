@@ -47,7 +47,8 @@ function App() {
         <Card 
         key={index} 
         title={note.title} 
-        content={note.content} />
+        content={note.content} 
+        backgroundColor={note.backgroundColor}/>
       ))}
     </>
   );

@@ -4,7 +4,26 @@ import "./NoteInput.css";
 
 export default function NoteInput({ onAddNote }) {
   const [isExpanded, setIsExpanded] = useState(false);
-  const [note, setNote] = useState({ title: "", content: "" });
+  const [note, setNote] = useState({
+    title: "",
+    content: "",
+    backgroundColor: "#ffffff",
+  });
+
+  const [showColors, setShowColors] = useState(false);
+
+  const colors = [
+    "#ffffff",
+    "#f28b82",
+    "#fbbc04",
+    "#fff475",
+    "#ccff90",
+    "#a7ffeb",
+    "#cbf0f8",
+    "#aecbfa",
+    "#d7aefb",
+    "#fdcfe8",
+  ];
 
   const noteRef = useRef(null);
 
@@ -31,7 +50,7 @@ export default function NoteInput({ onAddNote }) {
 
     onAddNote(note);
 
-    setNote({ title: "", content: "" });
+    setNote({ title: "", content: "", backgroundColor: "" });
     setIsExpanded(false);
   }
 
@@ -51,7 +70,12 @@ export default function NoteInput({ onAddNote }) {
 
   return (
     <div className="note-container">
-      <div className="note-card" ref={noteRef} onClick={handleExpanded}>
+      <div
+        className="note-card"
+        ref={noteRef}
+        onClick={handleExpanded}
+        style={{ backgroundColor: note.backgroundColor || "#fff" }}
+      >
         {!isExpanded && (
           <div className="three-icons">
             <SquareCheckBig />
@@ -66,9 +90,25 @@ export default function NoteInput({ onAddNote }) {
               <Pin />
             </div>
 
-            <div className="color">
+            <div className="palette" onClick={() => setShowColors(!showColors)}>
               <Palette />
             </div>
+
+            {showColors && (
+              <div className="color-popup">
+                {colors.map((color) => (
+                  <div
+                    key={color}
+                    className="color-dot"
+                    style={{ backgroundColor: color }}
+                    onClick={() => {
+                      setNote((prev) => ({ ...prev, backgroundColor: color }));
+                      setShowColors(false);
+                    }}
+                  ></div>
+                ))}
+              </div>
+            )}
 
             <input
               name="title"

@@ -15,15 +15,17 @@ export default function NoteInput({ onAddNote }) {
 // show list of colors
   const colors = [
     "#ffffff",
-    "#f28b82",
-    "#fbbc04",
-    "#fff475",
-    "#ccff90",
-    "#a7ffeb",
-    "#cbf0f8",
-    "#aecbfa",
-    "#d7aefb",
-    "#fdcfe8",
+    "#faafa8",
+    "#f39f76",
+    "#FFF8B8",
+    "#e2f6d3",
+    "#b4ddd3",
+    "#d4e4ed",
+    "#aeccdc",
+    "#d3bfdb",
+    "#f6e2dd",
+    "#E9E3D4",
+    "#EFEFF1"
   ];
 
   const noteRef = useRef(null);
@@ -94,6 +96,7 @@ export default function NoteInput({ onAddNote }) {
             <div className="palette" onClick={() => setShowColors(!showColors)}>
               <Palette />
             </div>
+            
             {showColors && (
               <div className="color-popup">
                 {colors.map((color) => (

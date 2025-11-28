@@ -88,7 +88,7 @@
   left: 45px;
   display: flex;
   gap: 6px;
-  background: #fff;
+  background: #fafafa;
   padding: 8px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
@@ -99,6 +99,6 @@
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  border: 1px solid #ddd;
+  border: 1px solid #999797;
   cursor: pointer;
 }

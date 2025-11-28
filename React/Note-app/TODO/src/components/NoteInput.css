@@ -84,8 +84,8 @@
 
 .color-popup {
   position: absolute;
-  bottom: 10px;
-  left: 45px;
+  top: 155px;
+  left: 25px;
   display: flex;
   gap: 6px;
   background: #fafafa;
@@ -93,12 +93,18 @@
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   z-index: 10;
+  overflow: hidden;
 }
 
 .color-dot {
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  border: 1px solid #999797;
+  border: 1px solid #ffffff;
   cursor: pointer;
+}
+
+.color-dot:hover {
+  transform: scale(1.1);
+  border: 1px solid #000000;
 }

@@ -17,7 +17,7 @@
 
 .card-item p {
   display: -webkit-box;
-  -webkit-line-clamp: 27;  
+  -webkit-line-clamp: 17;  
   -webkit-box-orient: vertical;
 
   overflow: hidden;

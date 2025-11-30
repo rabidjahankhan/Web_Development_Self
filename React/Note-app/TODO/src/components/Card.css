@@ -15,6 +15,9 @@
   right: 8px;
   cursor: pointer;
 }
+.ellipsis-vertical:hover {
+  transform: scale(1.1);
+}
 
 .card-item p {
   display: -webkit-box;

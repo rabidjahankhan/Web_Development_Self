@@ -8,7 +8,7 @@ export default function Card({ title, content, backgroundColor, onOpen }) {
         <h2>{title}</h2>
       </strong>
       <p>{content}</p>
-      <EllipsisVertical size={16} strokeWidth={0.5} className="ellipsis-vertical"/>
+      <EllipsisVertical size={16} strokeWidth={0.5} absoluteStrokeWidth className="ellipsis-vertical"/>
     </div>
   );
 }

@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import NoteInput from "./components/NoteInput";
 import Card from "./components/Card";
 import Modal from "./components/Modal/Modal";
+import CardList from "./components/CardList";
 
 function App() {
   const [notes, setNotes] = useState([]);
@@ -58,8 +59,10 @@ function App() {
     <>
       <NoteInput onAddNote={addNote} />
 
+      <CardList>
       {notes.map((note, index) => (
         <Card
+          className = "card-item"
           key={index}
           title={note.title}
           content={note.content}
@@ -67,6 +70,7 @@ function App() {
           onOpen={() => openModal(index)}
         />
       ))}
+      </CardList>
 
       {modalOpen && modalNoteIdex !== null && (
         <Modal note={notes[modalNoteIdex]} onClose={closeModal} />

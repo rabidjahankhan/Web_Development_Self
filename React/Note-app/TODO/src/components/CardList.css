@@ -1,0 +1,13 @@
+.card-list {
+    column-width: 250px;
+    column-gap: 16px;
+    padding: 20px;
+  }
+  
+  .card-item {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 16px;
+    break-inside: avoid;
+  }
+  

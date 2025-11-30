@@ -1,16 +1,9 @@
-.card-container {
-  display: inline-grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 10px;
-  padding: 20px;
-  margin-top: 25px;
-}
+
 .card-item {
   border-radius: 8px;
   min-height: 100px;
   max-height: 673px;
   padding: 16px ;
-
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
@@ -19,18 +12,10 @@
   display: -webkit-box;
   -webkit-line-clamp: 17;  
   -webkit-box-orient: vertical;
-
   overflow: hidden;
   text-overflow: ellipsis;
-
   line-height: 1.4;
 }
-
-/* @media (min-width: 580px) and (max-width: 869px) {
-  .card-container {
-    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
-  }
-} */
 
 @media (max-width: 594px) {
   .card-container {
